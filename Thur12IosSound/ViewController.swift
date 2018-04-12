@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let soundPlayer = SoundPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func playSound(_ sender: UIButton) {
+        soundPlayer.play(index: sender.tag)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -14,6 +14,11 @@
 		637FC1E7207F45B300AD0D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637FC1E5207F45B300AD0D5A /* LaunchScreen.storyboard */; };
 		637FC1F2207F45B300AD0D5A /* Thur12IosSoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC1F1207F45B300AD0D5A /* Thur12IosSoundTests.swift */; };
 		637FC1FD207F45B300AD0D5A /* Thur12IosSoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC1FC207F45B300AD0D5A /* Thur12IosSoundUITests.swift */; };
+		637FC20F207F470300AD0D5A /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 637FC20B207F470300AD0D5A /* bell.wav */; };
+		637FC210207F470300AD0D5A /* crow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 637FC20C207F470300AD0D5A /* crow.wav */; };
+		637FC211207F470300AD0D5A /* horn2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 637FC20D207F470300AD0D5A /* horn2.wav */; };
+		637FC212207F470300AD0D5A /* horn1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 637FC20E207F470300AD0D5A /* horn1.wav */; };
+		637FC214207F4DD900AD0D5A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC213207F4DD900AD0D5A /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		637FC1F8207F45B300AD0D5A /* Thur12IosSoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Thur12IosSoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		637FC1FC207F45B300AD0D5A /* Thur12IosSoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thur12IosSoundUITests.swift; sourceTree = "<group>"; };
 		637FC1FE207F45B300AD0D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637FC20B207F470300AD0D5A /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bell.wav; sourceTree = "<group>"; };
+		637FC20C207F470300AD0D5A /* crow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crow.wav; sourceTree = "<group>"; };
+		637FC20D207F470300AD0D5A /* horn2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn2.wav; sourceTree = "<group>"; };
+		637FC20E207F470300AD0D5A /* horn1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn1.wav; sourceTree = "<group>"; };
+		637FC213207F4DD900AD0D5A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,14 @@
 		637FC1DB207F45B300AD0D5A /* Thur12IosSound */ = {
 			isa = PBXGroup;
 			children = (
+				637FC20A207F46E900AD0D5A /* Sounds */,
 				637FC1DC207F45B300AD0D5A /* AppDelegate.swift */,
 				637FC1DE207F45B300AD0D5A /* ViewController.swift */,
 				637FC1E0207F45B300AD0D5A /* Main.storyboard */,
 				637FC1E3207F45B300AD0D5A /* Assets.xcassets */,
 				637FC1E5207F45B300AD0D5A /* LaunchScreen.storyboard */,
 				637FC1E8207F45B300AD0D5A /* Info.plist */,
+				637FC213207F4DD900AD0D5A /* SoundPlayer.swift */,
 			);
 			path = Thur12IosSound;
 			sourceTree = "<group>";
@@ -123,6 +135,17 @@
 				637FC1FE207F45B300AD0D5A /* Info.plist */,
 			);
 			path = Thur12IosSoundUITests;
+			sourceTree = "<group>";
+		};
+		637FC20A207F46E900AD0D5A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				637FC20B207F470300AD0D5A /* bell.wav */,
+				637FC20C207F470300AD0D5A /* crow.wav */,
+				637FC20E207F470300AD0D5A /* horn1.wav */,
+				637FC20D207F470300AD0D5A /* horn2.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +255,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637FC210207F470300AD0D5A /* crow.wav in Resources */,
 				637FC1E7207F45B300AD0D5A /* LaunchScreen.storyboard in Resources */,
+				637FC212207F470300AD0D5A /* horn1.wav in Resources */,
 				637FC1E4207F45B300AD0D5A /* Assets.xcassets in Resources */,
 				637FC1E2207F45B300AD0D5A /* Main.storyboard in Resources */,
+				637FC211207F470300AD0D5A /* horn2.wav in Resources */,
+				637FC20F207F470300AD0D5A /* bell.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				637FC1DF207F45B300AD0D5A /* ViewController.swift in Sources */,
+				637FC214207F4DD900AD0D5A /* SoundPlayer.swift in Sources */,
 				637FC1DD207F45B300AD0D5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
